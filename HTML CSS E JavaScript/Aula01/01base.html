@@ -1,0 +1,103 @@
+import java.util.HashMap;
+import java.util.InputMismatchException;
+import java.util.Scanner;
+
+public class grupo {
+    static HashMap<String, String> listaProduto = new HashMap<>();
+    static HashMap<String, Double> listaPreco = new HashMap<>();
+    public static void main(String[] args) {
+    //Scanner scan = new Scanner(System.in);
+        menu();
+    }
+
+    public static void menu() {
+        while (true) {
+            Scanner scan = new Scanner(System.in);
+            try {
+
+                System.out.println("--------------- MENU -----------------");
+                System.out.print("1 - Cadastrar produto\n2 - Listar produtos\n3 - Produto mais caro\n" +
+                        "4 - Média de preços\n5 - Produtos com preço acima da média\n0 - Sair\nOpção: ");
+                int op = scan.nextInt();
+                if (op == 0) break;
+
+                switch (op) {
+                    case 1: cadastraProduto(scan);
+                        break;
+                    case 2: listarProdutos();
+                        break;
+                    case 3: mostrarMaisCaro(scan);
+                        break;
+                    default: {
+                        System.out.println("Opção inválida!");
+                        break;
+                    }
+                }
+
+            } catch (InputMismatchException e) {
+                System.out.println("Entrada inválida!");
+            } catch (Exception e) {
+                System.out.println("Erro inesperado!");
+                ;
+            }
+        }
+    }
+
+    public static void mostrarMaisCaro(Scanner scan) {
+        String idMaisCaro = "";
+        Double valorMaisCaro = 0.0;
+
+        for (int i = 0; i < listaPreco.size(); i++) {
+            if(listaPreco.get(Integer.toString(i)) > valorMaisCaro) {
+                valorMaisCaro = listaPreco.get(Integer.toString(i));
+                idMaisCaro = Integer.toString(i);
+            }
+        }
+
+        System.out.println("Produto mais caro da loja: " + listaProduto.get(idMaisCaro) + " com valor de: " + listaPreco.get(idMaisCaro));
+
+    }
+
+    public static void listarProdutos() {
+        for (int i = 0; i < listaProduto.size() ; i++) {
+            System.out.println(listaProduto.get(Integer.toString(i)) + " - R$" + listaPreco.get(Integer.toString(i)));
+        }
+    }
+
+
+
+
+
+    public static void cadastraProduto(Scanner scan) {
+        while (true){
+            if (listaProduto.size() == listaPreco.size()) {
+                System.out.println("Nome do produto");
+                String nomeProduto = scan.next();
+                if (!listaProduto.containsValue(nomeProduto)) {
+                    listaProduto.put(Integer.toString(listaProduto.size()), nomeProduto);
+                    System.out.println("Preço do produto");
+                    listaPreco.put(Integer.toString(listaPreco.size()), scan.nextDouble());
+
+                    while (true) {
+                        System.out.print("Deseja cadastrar outro produto? (S/N): ");
+                        String opcao = scan.next().trim();
+                        if (opcao.equalsIgnoreCase("S")) {
+                            break; // sai do loop interno, continua cadastrando
+                        } else if (opcao.equalsIgnoreCase("N")) {
+                            return; // encerra a função
+                        } else {
+                            System.out.println("Entrada inválida. Digite S ou N.");
+                        }
+                    }
+
+                } else {
+                    System.out.println("Produto já cadastrado!");
+
+                }
+            }
+        }
+
+
+
+    }
+}

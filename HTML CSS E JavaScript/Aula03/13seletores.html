@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 - Seletores</title>
+</head>
+<body>
+    <p class="texto">A</p>  
+    <p class="texto">B</p>
+    <p id  = "texto">C</p>
+
+
+    <script>
+
+        // MODIFICAR ELEMENTOS COM CLASSE
+        let paragrafos = document.getElementsByClassName("texto");
+        for (let i = 0; i < paragrafos.length; i++) {
+            paragrafos[i].innerHTML = "Parágrafo modificado com classe texto.";
+            paragrafos[i].style.color = "green";
+        }
+        // MODIFICAR ELEMENTOS COM ID
+        let paragrafoId = document.getElementById("texto");
+        paragrafoId.innerHTML = "Parágrafo modificado com ID.";
+        paragrafoId.style.color = "purple";
+        
+        // MODIFICAR ELEMENTOS COM TAG
+        let paragrafosTag = document.getElementsByTagName("p");
+        for (let i = 0; i < paragrafosTag.length; i++) {
+            paragrafosTag[i].innerHTML = "Parágrafo modificado com tag p.";
+            paragrafosTag[i].style.color = "orange";
+        }
+        // MODIFICAR ELEMENTOS COM SELETOR DE CLASSE
+        let paragrafosQuery = document.querySelectorAll(".texto");
+        paragrafosQuery.forEach((paragrafo) => {
+            paragrafo.innerHTML = "Parágrafo modificado com querySelectorAll.";
+            paragrafo.style.color = "blue";
+        });
+    </script>       
+   
+    
+</body>
+</html>

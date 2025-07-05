@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>06 - Laço While</title>
+
+    <script>
+        // LAÇO WHILE
+        let contador = 0;
+
+        while (contador < 5) {
+            alert("Contador: " + contador);
+            contador++;
+        }
+
+        // LAÇO DO WHILE
+        let numero = 0;
+
+        do {
+            alert("Número: " + numero);
+            numero++;
+        } while (numero < 5);
+        
+        // Do while é executado pelo menos uma vez, mesmo que a condição seja falsa na primeira verificação.    
+        // Exemplo de do while com condição falsa
+        let i = 10;
+        do {
+            alert("Valor de i: " + i);
+            i++;
+        } while (i < 5); // Esta condição é falsa, mas o bloco será executado uma vez.
+        // Exemplo de do while com condição verdadeira
+        let j = 0;
+        do {
+            alert("Valor de j: " + j);
+            j++;
+        } while (j < 5); // Esta condição é verdadeira, então o bloco será executado até que j seja igual a 5.
+        
+       
+        
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

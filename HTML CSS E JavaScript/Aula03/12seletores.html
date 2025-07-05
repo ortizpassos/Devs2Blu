@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12 - Seletores</title>
+
+     <script>
+        window.onload = function() {
+           // CAPTURANDO O PRIMEIRO PARÁGRAFO
+        let primeiroParagrafo = document.getElementsByTagName("p")[0];
+        // ALTERANDO O TEXTO DO PRIMEIRO PARÁGRAFO
+        // ALTERANDO COR DO TEXTO DO PRIMEIRO PARÁGRAFO
+        primeiroParagrafo.style.color = "blue";
+        // PISCANDO O TEXTO DO PRIMEIRO PARÁGRAFO ENTRE CORES 
+        setInterval(() => {
+            primeiroParagrafo.style.color = primeiroParagrafo.style.color === "blue" ? "red" : "blue";
+        }, 1000);       
+        primeiroParagrafo.innerHTML = "Este é o primeiro parágrafo, modificado pelo JavaScript.";
+        
+        };
+    
+    // SCRIPT PODE SER INSERIDO NO FINAL DO BODY PARA GARANTIR QUE O DOM ESTEJA PRONTO
+    </script>
+
+    
+</head>
+<body>
+    <p>Paragrafo 1</p>
+    <p>Paragrafo 2</p>    
+
+
+    
+</body>
+</html>

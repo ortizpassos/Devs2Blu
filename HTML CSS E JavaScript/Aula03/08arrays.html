@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08 - Arrays</title>
+
+    <script>
+        
+
+        // ARRAYS
+        // Arrays são estruturas de dados que permitem armazenar múltiplos valores em uma única variável.
+
+        const frutas = ["maçã", "banana", "laranja", "uva"];
+
+        // Acessando elementos do array
+        alert("Primeira fruta: " + frutas[0]); // maçã
+        alert("Segunda fruta: " + frutas[1]); // banana
+
+        // Adicionando um elemento ao final do array
+        frutas.push("abacaxi");
+        alert("Frutas após adicionar abacaxi: " + frutas.join(", "));
+
+        // Removendo o último elemento do array
+        const ultimaFruta = frutas.pop();
+        alert("Última fruta removida: " + ultimaFruta);
+        alert("Frutas após remoção: " + frutas.join(", "));
+
+        // Exibindo o tamanho do array
+        alert("Número de frutas: " + frutas.length);   
+        
+        // Excluir um elemento específico
+        const indice = frutas.indexOf("banana");    
+        if (indice !== -1) {
+            frutas.splice(indice, 1); // Remove a banana
+            alert("Frutas após remover banana: " + frutas.join(", "));
+        } else {
+            alert("Banana não encontrada no array.");
+        }
+        // Iterando sobre o array
+        for (let i = 0; i < frutas.length; i++) {   
+            alert("Fruta " + (i + 1) + ": " + frutas[i]);
+        }       
+// Verificando se um elemento existe no array
+        const existeLaranja = frutas.includes("laranja");
+        if (existeLaranja) {
+            alert("A laranja está no array.");
+        } else {
+            alert("A laranja não está no array.");
+        }
+        // Ordenando o array
+        frutas.sort();
+        alert("Frutas ordenadas: " + frutas.join(", "));    
+        // Invertendo a ordem do array
+        frutas.reverse();
+        alert("Frutas invertidas: " + frutas.join(", "));
+        // Concatenando dois arrays
+        const maisFrutas = ["kiwi", "manga"];
+        const todasFrutas = frutas.concat(maisFrutas);
+
+        alert("Todas as frutas: " + todasFrutas.join(", "));
+        // Verificando se é um array
+        const ehArray = Array.isArray(frutas);
+        alert("É um array? " + ehArray);
+        // Limpar o array
+        frutas.length = 0; // Limpa o array
+        alert("Frutas após limpar: " + frutas.join(", "));
+        // Criando um array multidimensional
+        const matriz = [
+            [1, 2, 3],
+            [4, 5, 6],
+            [7, 8, 9]
+        ];
+
+        // Acessando elementos da matriz
+        alert("Elemento na posição [0][0]: " + matriz[0][0]);
+        alert("Elemento na posição [1][2]: " + matriz[1][2]);
+        // Iterando sobre a matriz
+        for (let i = 0; i < matriz.length; i++) {
+            for (let j = 0; j < matriz[i].length; j++) {
+                alert("Elemento na posição [" + i + "][" + j + "]: " + matriz[i][j]);
+            }
+        }
+        // Transformando um array em string
+        const frutasString = frutas.join(", ");
+        alert("Frutas como string: " + frutasString);
+
+
+        // Transformando uma string em array
+        const texto = "maçã, banana, laranja";
+
+        const arrayDeFrutas = texto.split(", ");
+        alert("Array de frutas: " + arrayDeFrutas.join(", "));  
+        // Verificando se um array é vazio
+        const arrayVazio = [];
+        if (arrayVazio.length === 0) {
+            alert("O array está vazio.");
+        } else {
+            alert("O array não está vazio.");
+        }
+        // Encontrando o índice de um elemento
+        const indiceLaranja = frutas.indexOf("laranja");
+        if (indiceLaranja !== -1) {
+            alert("A laranja está no índice: " + indiceLaranja);
+        } else {
+            alert("A laranja não foi encontrada no array.");
+        }
+        // Filtrando elementos de um array
+        const numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];        
+        const numerosPares = numeros.filter(num => num % 2 === 0);
+        alert("Números pares: " + numerosPares.join(", "));
+        // Mapear elementos de um array
+        const numerosAoQuadrado = numeros.map(num => num * num);
+        alert("Números ao quadrado: " + numerosAoQuadrado.join(", "));
+        // Reduzir um array a um único valor
+        const soma = numeros.reduce((acumulador, valorAtual) => acumulador + valorAtual, 0);
+        alert("Soma dos números: " + soma);
+        // Verificando se todos os elementos atendem a uma condição
+        const todosPares = numeros.every(num => num % 2 === 0); 
+        alert("Todos os números são pares? " + todosPares);
+        // Verificando se pelo menos um elemento atende a uma condição  
+        const algumPar = numeros.some(num => num % 2 === 0);
+        alert("Algum número é par? " + algumPar);
+        // Encontrando o primeiro elemento que atende a uma condição
+        const primeiroPar = numeros.find(num => num % 2 === 0); 
+        alert("Primeiro número par: " + primeiroPar);
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

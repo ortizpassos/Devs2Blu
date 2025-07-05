@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Conversor de Moedas</title>
+  <link rel="stylesheet" href="exercicio02.css" />
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Conversor de Moedas</h3>
+
+<!-- Carrega imagem inicial -->
+        <div class="image-container">
+        <img id="imagem-moeda" src="imagens/money.png" alt="Imagem Inicial" width="100" />
+        </div>
+
+<!-- Caixa para digitar o valor a se convertido -->
+        <div class="form-group">
+          <label for="valor">Valor em Reais (R$):</label>
+          <input type="number" id="valor" placeholder="Digite o valor em reais" />
+        </div>
+
+<!-- Selecionar tipo de conversão -->
+        <div class="form-group">
+          <label for="tipo-conversao">Tipo de conversão:</label>
+          <select id="tipo-conversao">
+            <option value="dolar">Real para Dólar</option>
+            <option value="euro">Real para Euro</option>
+            <option value="libra">Real para Libra</option>
+            <option value="bitcoin">Real para Bitcoin</option>
+          </select>
+        </div>
+
+<!-- Botão para converter e exibir o resultado -->
+        <button id="btn-converter">Converter</button>        
+        <div id="resultado" class="alert"></div> 
+    <script src="exercicio02.js"></script>
+</body>
+</html>

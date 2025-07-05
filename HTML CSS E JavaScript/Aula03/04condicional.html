@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>04 - condicional</title>
+    <script>
+
+
+//    CONDICIONAIS
+        let idade = prompt("Digite sua idade: ");   
+        idade = parseInt(idade);    
+        if (idade >= 18) {
+            alert("Você é maior de idade.");
+        } else if (idade >= 12) {
+            alert("Você é adolescente.");
+        } else {
+            alert("Você é criança.");
+        }
+//     OPERADOR TERNARIO
+        let idade2 = prompt("Digite sua idade: ");
+        idade2 = parseInt(idade2);
+        let resultado = (idade2 >= 18) ? "Você é maior de idade." : "Você é menor de idade.";
+        alert(resultado);
+
+//     IF/ELSE IF/ELSE
+        let nota = prompt("Digite sua nota: ");
+        nota = parseFloat(nota);
+        if (nota >= 7) {
+            alert("Aprovado");
+        } else if (nota >= 5) {
+            alert("Recuperação");
+        } else {
+            alert("Reprovado");
+        } 
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

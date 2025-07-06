@@ -14,6 +14,7 @@
 <body>
 
     <!-- CADASTRA O ALUNO -->
+<div class="container">    
   <h2>Calcular Média</h2>
   <label for="nomeAluno">Digite o nome do aluno:</label>
   <input type="text" id="nomeAluno">
@@ -29,6 +30,7 @@
   </div>
 
   <!-- CRIA UMA TABEL PARA MOSTRAR DADOS DOS ALUNOS -->
+   <div id="tabelaContainer">
   <table id="tabelaAlunos">
     <thead>
       <tr>
@@ -40,10 +42,14 @@
         <th>Situação</th>
       </tr>
     </thead>
+    
+   
     <tbody>
       <!-- Dados dos alunos aparecerão aqui -->
     </tbody>
   </table> 
+  </div>
+</div>
      <!-- JS -->
     <script src="exercicio01.js"></script>
 </body>

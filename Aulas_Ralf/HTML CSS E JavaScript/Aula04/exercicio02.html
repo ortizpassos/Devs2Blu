@@ -8,23 +8,23 @@
 </head>
 <body>
   <div class="container">
-    <div class="card">
-      <div class="card-body">
-        <h3 class="card-title">Conversor de Moedas</h3>
+    <div class="cartao">
+      <div class="corpo-cartao">
+        <h3 class="titulo-cartao">Conversor de Moedas</h3>
 
-<!-- Carrega imagem inicial -->
+        <!-- Carrega imagem inicial -->
         <div class="image-container">
-        <img id="imagem-moeda" src="imagens/money.png" alt="Imagem Inicial" width="100" />
+          <img id="imagem-moeda" src="imagens/money.png" alt="Imagem Inicial" width="100" />
         </div>
 
-<!-- Caixa para digitar o valor a se convertido -->
-        <div class="form-group">
+        <!-- Caixa para digitar o valor a ser convertido -->
+        <div class="formulario">
           <label for="valor">Valor em Reais (R$):</label>
           <input type="number" id="valor" placeholder="Digite o valor em reais" />
         </div>
 
-<!-- Selecionar tipo de conversão -->
-        <div class="form-group">
+        <!-- Selecionar tipo de conversão -->
+        <div class="formulario">
           <label for="tipo-conversao">Tipo de conversão:</label>
           <select id="tipo-conversao">
             <option value="dolar">Real para Dólar</option>
@@ -34,9 +34,13 @@
           </select>
         </div>
 
-<!-- Botão para converter e exibir o resultado -->
+        <!-- Botão para converter e exibir o resultado -->
         <button id="btn-converter">Converter</button>        
-        <div id="resultado" class="alert"></div> 
-    <script src="exercicio02.js"></script>
+        <div id="resultado" class="alert"></div>
+      </div> <!-- Fecha .corpo-cartao -->
+    </div>   <!-- Fecha .cartao -->
+  </div>     <!-- Fecha .container -->
+
+  <script src="exercicio02.js"></script>
 </body>
 </html>

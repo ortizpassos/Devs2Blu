@@ -12,21 +12,21 @@ body {
   padding: 20px;
 }
 
-/* Card (caixa branca com sombra) */
-.card {
+/* cartao (caixa branca com sombra) */
+.cartao {
   background-color: #ffffff;
   border-radius: 8px;
   box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
   padding: 30px;
 }
 
-/* Card body */
-.card-body {
+/* corpo-cartao */
+.corpo-cartao {
   padding: 10px;
 }
 
-/* Título */
-.card-title {
+/* titulo-cartao */
+.titulo-cartao {
   text-align: center;
   margin-bottom: 24px;
   font-size: 24px;
@@ -38,14 +38,14 @@ body {
   margin-bottom: 20px;
 }
 
-.form-group label {
+.formulario label {
   display: block;
   margin-bottom: 5px;
   color: #555;
 }
 
-.form-group input,
-.form-group select {
+.formulario input,
+.formulario select {
   width: 100%;
   padding: 10px;
   border: 1px solid #ccc;
@@ -65,11 +65,11 @@ button {
   cursor: pointer;
   transition: background-color 0.3s;
 }
-
 button:hover {
-  background-color: #0056b3;
-}
-
+  transition: all 1s ease;
+  background-color: #0ddf8b;   
+} 
+    
 /* Alerta */
 .alert {
   margin-top: 20px;

@@ -24,7 +24,7 @@ let alunoAtual = null;
 
       
 
-      // opcional: desativa o campo de nome para evitar cadastrar outro aluno antes de salvar as notas
+      // Desabilita o campo nome do aluno e habilita os campos de notas
       document.getElementById("nomeAluno").disabled = true;
       document.getElementById("btnOk").disabled = true;
       document.getElementById("nota1").disabled = false;
@@ -41,7 +41,7 @@ let alunoAtual = null;
         
       }
 
-      document.getElementById("nota1").disabled = true;
+        document.getElementById("nota1").disabled = true;
         document.getElementById("nota2").disabled = true;
         document.getElementById("nota3").disabled = true;
         document.getElementById("btnSalvarNotas").disabled = true;
@@ -53,6 +53,10 @@ let alunoAtual = null;
 
       if (isNaN(n1) || isNaN(n2) || isNaN(n3)) {
         alert("Digite todas as notas!");
+         document.getElementById("nota1").disabled = false;
+         document.getElementById("nota2").disabled = false;
+         document.getElementById("nota3").disabled = false;
+         document.getElementById("btnSalvarNotas").disabled = false;
         return;
       }
 

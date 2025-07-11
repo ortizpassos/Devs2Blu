@@ -53,6 +53,7 @@ function cadastrar() {
   resultado.classList.remove("alert-info");
   resultado.classList.add("alert-success");
 
+// 
   resultado.innerHTML = `
     <p><strong>Nome:</strong> ${nome}</p>
     <p><strong>CEP:</strong> ${cep}</p>

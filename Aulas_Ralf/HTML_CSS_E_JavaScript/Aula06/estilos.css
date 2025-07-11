@@ -1,0 +1,19 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.container input {
+  padding: 8px;
+  width: 300px; /* opcional */
+}
+
+.button-container {
+  padding: 10px;
+  width: 300px; /* opcional */
+  color: white; /* Cor do texto branco */ 
+  cursor: pointer; /* Muda o cursor para indicar que é clicável */
+  gap: 10px;
+
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Endereço</title>  
+    <link rel="stylesheet" href="estilos.css">      
+</head>
+<body>
+    
+    <!--CAIXAS DE ENTRADA DE DADOS-->
+<div class="container">       
+    <h1>Cadastro de Endereço</h1>
+    <input type="text" id="nome"        placeholder="Digite o Nome" />
+    <input type="text" id="cep"         placeholder="Digite o CEP" />
+    <input type="text" id="logradouro"  readonly placeholder="Logradouro" />
+    <input type="text" id="bairro"      readonly placeholder="Bairro" />
+    <input type="text" id="cidade"      readonly placeholder="Cidade" />
+    <input type="text" id="uf"          readonly placeholder="UF" />
+</div>
+
+<!--BOTÃO PARA BUSCAR DADOS VIACEP-->
+    <div class="button-container">
+        <button id="cadastrar" onclick="cadastrar()">Cadastrar</button>
+    </div>
+
+    <div id="resultado"></div>
+    
+
+    <script src="script.js"></script>
+</body>
+</html>

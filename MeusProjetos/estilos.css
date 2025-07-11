@@ -1,0 +1,111 @@
+/* Reset simples */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to right, #f0f4f8, #e9eff5);
+  color: #333;
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+}
+
+h2 {
+  margin-bottom: 30px;
+  color: #2c3e50;
+  font-size: 28px;
+}
+
+label {
+  align-self: flex-start;
+  font-weight: bold;
+  margin-bottom: 6px;
+  margin-top: 15px;
+  font-size: 15px;
+}
+
+input {
+  width: 100%;
+  max-width: 600px;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+  transition: border 0.2s ease;
+}
+
+input:focus {
+  border-color: #2980b9;
+  outline: none;
+}
+
+button {
+  background-color: #2980b9;
+  color: white;
+  font-size: 16px;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  margin-top: 15px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+}
+
+button:not(:disabled):hover {
+  background-color: #1c6ca9;
+}
+
+h3 {
+  margin-top: 30px;
+  color: #34495e;
+  align-self: flex-start;
+}
+
+pre {
+  background-color: #f9f9f9;
+  color: #2d2d2d;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  width: 100%;
+  max-width: 600px;
+  font-size: 15px;
+  overflow-x: auto;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+pre {
+  background-color: #f9f9f9;
+  color: #2d2d2d;
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.08);
+}
+

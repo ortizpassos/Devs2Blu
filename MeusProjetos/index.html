@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Gerador de Script GitHub</title>
+  <link rel="stylesheet" href="estilos.css"> 
+  
+</head>
+<body>
+  <h2>Gerador de Script GitHub</h2>
+
+<div class="form-group">
+  <label for="usuario">Usuário do GitHub:</label>
+  <input type="text" id="usuario" placeholder="Ex: ortizpassos" />
+</div>
+
+<div class="form-group">
+  <label for="caminho">Cole aqui o caminho do seu projeto:</label>
+  <input type="text" id="caminho" placeholder="Ex: C:/Users/SeuNome/Projetos" />
+</div>
+
+<button id="gerar" disabled> Gerar script .sh para download</button>
+
+<!-- Novo agrupamento do título e do script gerado -->
+<div class="form-group">
+  <label for="script">Script gerado:</label>
+  <pre id="script"></pre>
+</div>
+
+<script src="script.js"></script>
+
+</body>
+
+</html>

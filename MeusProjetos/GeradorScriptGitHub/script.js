@@ -1,3 +1,4 @@
+//
     const usuario = document.getElementById('usuario');
     const caminho = document.getElementById('caminho');
     const gerar = document.getElementById('gerar');
